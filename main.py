@@ -46,4 +46,4 @@ def delete_user_by_email(user_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="User not found")
     db.delete(db_user)
     db.commit()
-    return {"message": "User deleted successfully"}
+    return {"message": "User has been deleted successfully"}
